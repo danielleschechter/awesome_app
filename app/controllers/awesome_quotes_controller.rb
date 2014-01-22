@@ -69,6 +69,6 @@ class AwesomeQuotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def awesome_quote_params
-      params.require(:awesome_quote).permit(:partaker_id, :quote)
+      params.require(:awesome_quote).permit(:quote)
     end
 end

@@ -11,10 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140122021138) do
+ActiveRecord::Schema.define(version: 20140122025438) do
 
   create_table "awesome_quotes", force: true do |t|
-    t.integer  "partaker_id"
     t.text     "quote"
     t.datetime "created_at"
     t.datetime "updated_at"
