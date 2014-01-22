@@ -1,0 +1,29 @@
+<h1>Listing awesome_quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Partaker</th>
+      <th>Quote</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @awesome_quotes.each do |awesome_quote| %>
+      <tr>
+        <td><%= awesome_quote.partaker_id %></td>
+        <td><%= awesome_quote.quote %></td>
+        <td><%= link_to 'Show', awesome_quote %></td>
+        <td><%= link_to 'Edit', edit_awesome_quote_path(awesome_quote) %></td>
+        <td><%= link_to 'Destroy', awesome_quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Awesome quote', new_awesome_quote_path %>

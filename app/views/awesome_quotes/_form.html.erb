@@ -1,0 +1,25 @@
+<%= form_for(@awesome_quote) do |f| %>
+  <% if @awesome_quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@awesome_quote.errors.count, "error") %> prohibited this awesome_quote from being saved:</h2>
+
+      <ul>
+      <% @awesome_quote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :partaker_id %><br>
+    <%= f.number_field :partaker_id %>
+  </div>
+  <div class="field">
+    <%= f.label :quote %><br>
+    <%= f.text_area :quote %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

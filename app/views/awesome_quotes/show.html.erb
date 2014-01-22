@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Partaker:</strong>
+  <%= @awesome_quote.partaker_id %>
+</p>
+
+<p>
+  <strong>Quote:</strong>
+  <%= @awesome_quote.quote %>
+</p>
+
+<%= link_to 'Edit', edit_awesome_quote_path(@awesome_quote) %> |
+<%= link_to 'Back', awesome_quotes_path %>

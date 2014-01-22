@@ -1,0 +1,2 @@
+module AwesomeQuotesHelper
+end
